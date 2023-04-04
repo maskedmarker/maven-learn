@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>dependency-mediation</artifactId>
+        <groupId>org.example.learn.maven</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>mediation-managed-dependency1</artifactId>
+    <description>演示 dependencyManagement对未显示指定版本号的兜底作用</description>
+
+    <dependencies>
+        <!--
+            虽然service-a.dependencies.guava没有显示声明版本,但是从父pom继承来的dependencyManagement声明限定了版本为29.0-jre
+            service-a.dependencies.xstream显示声明了版本,那么dependencyManagement的兜底就失效了
+        -->
+        <dependency>
+            <groupId>org.example.learn.maven</groupId>
+            <artifactId>service-a</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+</project>
