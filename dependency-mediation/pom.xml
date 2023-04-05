@@ -15,6 +15,7 @@
         <module>mediation-dependency2</module>
         <module>mediation-managed-dependency1</module>
         <module>mediation-managed-dependency2</module>
+        <module>mediation-managed-dependency3</module>
     </modules>
 
     <artifactId>dependency-mediation</artifactId>

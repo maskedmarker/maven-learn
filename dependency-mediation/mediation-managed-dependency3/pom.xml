@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>dependency-mediation</artifactId>
+        <groupId>org.example.learn.maven</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>mediation-managed-dependency3</artifactId>
+    <description>演示 import的基础用法</description>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- import只能用于dependencyManagement
+                 只是用service-c的dependencyManagement.dependencies 来substitute 本pom的dependencyManagement.dependencies.service-c
+                 与service-c的dependencies无关
+            -->
+            <dependency>
+                <groupId>org.example.learn.maven</groupId>
+                <artifactId>service-c</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
