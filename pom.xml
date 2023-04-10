@@ -12,6 +12,7 @@
     <module>common</module>
     <module>dependency-mediation</module>
     <module>project-inheritance</module>
+    <module>plugins</module>
   </modules>
 
   <name>maven-learn-parent</name>

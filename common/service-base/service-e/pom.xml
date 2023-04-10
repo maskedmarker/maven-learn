@@ -24,6 +24,7 @@
     <dependencies>
         <!-- dependencyManagement不仅可以对未指定版本号的直接依赖起到兜底作用,
              还可以控制对间接依赖的版本(即使间接依赖已经指定了版本号)
+             fastjson2-extension的实际版本号是2.0.22
         -->
         <dependency>
             <groupId>com.alibaba</groupId>

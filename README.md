@@ -12,8 +12,13 @@ project object model(POM)
 effective pom
 build lifecycle
 build profile
+build phrase
 managed-dependency(即dependencyManagement section中dependencies,限定依赖的版本号)
 直接依赖,间接依赖(transitive dependency)
+source(指代码,比如java)
+resource(指配置文件)
+testSource(测试代码)
+testResource(测试相关的配置文件)
 
 # 冲突仲裁
 优先就近优先原则;其次靠前优先原则
