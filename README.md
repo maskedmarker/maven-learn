@@ -40,7 +40,12 @@ dependencyManagement声明中的managed-dependency有以下作用:
 2. Maven settings trigger(利用pom文件中的<settings>/<activeProfiles>(hard-coded))
 3. Environment specifc trigger(JVM参数, -D)
 
-## 插件
+## 查看插件信息
 查看maven插件的详情,通过下面命令
 1. mvn help:describe -Dplugin=<plugin-id>  (第一步确定插件有哪些goal)
 2. mvn <goal-prefix>:help -Ddetail=true -Dgoal=<goal-name> (第二步确定该插件的help goal,通过该goal获取其他goal的详情)
+
+## build lifecycle与插件goal
+1. maven预设了,根据不同packaging类型,为不同的lifecycle phrase绑定指定的plugin goal, 这些配置信息的位置在 ${MAVEN_HOME}/lib/maven-core-3.2.3.jar/META-INF/plex/components.xml
+2. super pom的位置在${M2_HOME}/lib/maven-model-builder-3.0.3.jar/org/apache/maven/model/pom-<version>.xml. super pom预设了一些通用的built-in project properties
+
