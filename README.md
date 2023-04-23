@@ -26,8 +26,6 @@ testResource(测试相关的配置文件)
 
 # 验证
 mvn dependency:tree -Dverbose
-通过IDEA的右键/maven/show effectvie pom并不是可靠的途径
-
 
 
 # 注意事项
@@ -41,3 +39,8 @@ dependencyManagement声明中的managed-dependency有以下作用:
 1. Explicit command-line trigger(mvn命令行参数, -P)
 2. Maven settings trigger(利用pom文件中的<settings>/<activeProfiles>(hard-coded))
 3. Environment specifc trigger(JVM参数, -D)
+
+## 插件
+查看maven插件的详情,通过下面命令
+1. mvn help:describe -Dplugin=<plugin-id>  (第一步确定插件有哪些goal)
+2. mvn <goal-prefix>:help -Ddetail=true -Dgoal=<goal-name> (第二步确定该插件的help goal,通过该goal获取其他goal的详情)
