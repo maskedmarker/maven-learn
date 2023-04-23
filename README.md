@@ -50,3 +50,7 @@ dependencyManagement声明中的managed-dependency有以下作用:
 2. super pom的位置在${M2_HOME}/lib/maven-model-builder-3.0.3.jar/org/apache/maven/model/pom-<version>.xml. super pom预设了一些通用的built-in project properties
 3. 使用自定义的插件时,需要用户自己声明goal和phrase的绑定关系
 
+## ant-style path matching
+1. path/**/* 等价于 path/**
+2. 当include与exclude冲突时,exclude优先级更高
+
