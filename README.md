@@ -66,3 +66,6 @@ Specify in the parent POM the directories of its modules (children POMs).
 The value of <module> is the relative path from the com.mycompany.app:my-app:1 to com.mycompany.app:my-module:1's POM (by practice, we use the module's artifactId as the module directory's name).
 the parent project now knows its modules, and if a Maven command is invoked against the parent project, that Maven command will then be executed to the parent's modules as well.
 就是为了转递命令,使子模块也能接收到相同的命令
+
+## relocation
+Sometimes it is necessary to relocate artifacts in the repository. One example of that is when a project moves from one groupId to a different groupId.

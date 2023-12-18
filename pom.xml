@@ -13,6 +13,7 @@
     <module>dependency-mediation</module>
     <module>project-inheritance</module>
     <module>plugins</module>
+      <module>relocation</module>
   </modules>
 
   <name>maven-learn-parent</name>

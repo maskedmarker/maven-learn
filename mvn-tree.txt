@@ -1,0 +1,387 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] maven-learn-parent                                                 [pom]
+[INFO] common                                                             [pom]
+[INFO] service-base                                                       [pom]
+[INFO] service-a                                                          [jar]
+[INFO] service-b                                                          [jar]
+[INFO] service-c                                                          [pom]
+[INFO] service-d                                                          [pom]
+[INFO] service-e                                                          [jar]
+[INFO] service-g                                                          [jar]
+[INFO] dependency-mediation                                               [pom]
+[INFO] mediation-property                                                 [jar]
+[INFO] mediation-dependency1                                              [jar]
+[INFO] mediation-dependency2                                              [jar]
+[INFO] mediation-managed-dependency1                                      [jar]
+[INFO] mediation-managed-dependency2                                      [jar]
+[INFO] mediation-managed-dependency3                                      [jar]
+[INFO] mediation-managed-dependency4                                      [jar]
+[INFO] mediation-managed-dependency5                                      [jar]
+[INFO] project-inheritance                                                [pom]
+[INFO] super-pom                                                          [jar]
+[INFO] inheritance-properties                                             [jar]
+[INFO] inheritance-dependencies                                           [jar]
+[INFO] inheritance-dependency-management                                  [jar]
+[INFO] plugins                                                            [pom]
+[INFO] plugin-resource                                                    [jar]
+[INFO] relocation                                                         [jar]
+[INFO] 
+[INFO] -------------< org.example.learn.maven:maven-learn-parent >-------------
+[INFO] Building maven-learn-parent 1.0-SNAPSHOT                          [1/26]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.0:tree (default-cli) @ maven-learn-parent ---
+[INFO] org.example.learn.maven:maven-learn-parent:pom:1.0-SNAPSHOT
+[INFO] 
+[INFO] -------------------< org.example.learn.maven:common >-------------------
+[INFO] Building common 1.0-SNAPSHOT                                      [2/26]
+[INFO]   from common\pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.0:tree (default-cli) @ common ---
+[INFO] org.example.learn.maven:common:pom:1.0-SNAPSHOT
+[INFO] 
+[INFO] ----------------< org.example.learn.maven:service-base >----------------
+[INFO] Building service-base 1.0-SNAPSHOT                                [3/26]
+[INFO]   from common\service-base\pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.0:tree (default-cli) @ service-base ---
+[INFO] org.example.learn.maven:service-base:pom:1.0-SNAPSHOT
+[INFO] 
+[INFO] -----------------< org.example.learn.maven:service-a >------------------
+[INFO] Building service-a 1.0-SNAPSHOT                                   [4/26]
+[INFO]   from common\service-base\service-a\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.0:tree (default-cli) @ service-a ---
+[INFO] org.example.learn.maven:service-a:jar:1.0-SNAPSHOT
+[INFO] +- com.alibaba:fastjson:jar:2.0.21:compile
+[INFO] |  \- com.alibaba.fastjson2:fastjson2-extension:jar:2.0.21:compile
+[INFO] |     \- com.alibaba.fastjson2:fastjson2:jar:2.0.21:compile
+[INFO] +- com.google.guava:guava:jar:29.0-jre:compile
+[INFO] |  +- com.google.guava:failureaccess:jar:1.0.1:compile
+[INFO] |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[INFO] |  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO] |  +- org.checkerframework:checker-qual:jar:2.11.1:compile
+[INFO] |  +- com.google.errorprone:error_prone_annotations:jar:2.3.4:compile
+[INFO] |  \- com.google.j2objc:j2objc-annotations:jar:1.3:compile
+[INFO] \- xstream:xstream:jar:1.1.3:compile
+[INFO] 
+[INFO] -----------------< org.example.learn.maven:service-b >------------------
+[INFO] Building service-b 1.0-SNAPSHOT                                   [5/26]
+[INFO]   from common\service-base\service-b\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.0:tree (default-cli) @ service-b ---
+[INFO] org.example.learn.maven:service-b:jar:1.0-SNAPSHOT
+[INFO] \- com.alibaba:fastjson:jar:2.0.22:compile
+[INFO]    \- com.alibaba.fastjson2:fastjson2-extension:jar:2.0.22:compile
+[INFO]       \- com.alibaba.fastjson2:fastjson2:jar:2.0.22:compile
+[INFO] 
+[INFO] -----------------< org.example.learn.maven:service-c >------------------
+[INFO] Building service-c 1.0-SNAPSHOT                                   [6/26]
+[INFO]   from common\service-base\service-c\pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.0:tree (default-cli) @ service-c ---
+[INFO] org.example.learn.maven:service-c:pom:1.0-SNAPSHOT
+[INFO] 
+[INFO] -----------------< org.example.learn.maven:service-d >------------------
+[INFO] Building service-d 1.0-SNAPSHOT                                   [7/26]
+[INFO]   from common\service-base\service-d\pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.0:tree (default-cli) @ service-d ---
+[INFO] org.example.learn.maven:service-d:pom:1.0-SNAPSHOT
+[INFO] 
+[INFO] -----------------< org.example.learn.maven:service-e >------------------
+[INFO] Building service-e 1.0-SNAPSHOT                                   [8/26]
+[INFO]   from common\service-base\service-e\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.0:tree (default-cli) @ service-e ---
+[INFO] org.example.learn.maven:service-e:jar:1.0-SNAPSHOT
+[INFO] +- com.alibaba:fastjson:jar:2.0.21:compile
+[INFO] |  \- com.alibaba.fastjson2:fastjson2-extension:jar:2.0.22:compile (version managed from 2.0.21)
+[INFO] |     \- com.alibaba.fastjson2:fastjson2:jar:2.0.22:compile
+[INFO] \- com.google.guava:guava:jar:29.0-jre:compile
+[INFO]    +- com.google.guava:failureaccess:jar:1.0.1:compile
+[INFO]    +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[INFO]    +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO]    +- org.checkerframework:checker-qual:jar:2.11.1:compile
+[INFO]    +- com.google.errorprone:error_prone_annotations:jar:2.3.4:compile
+[INFO]    \- com.google.j2objc:j2objc-annotations:jar:1.3:compile
+[INFO] 
+[INFO] -----------------< org.example.learn.maven:service-g >------------------
+[INFO] Building service-g 1.0-SNAPSHOT                                   [9/26]
+[INFO]   from common\service-base\service-g\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.0:tree (default-cli) @ service-g ---
+[INFO] org.example.learn.maven:service-g:jar:1.0-SNAPSHOT
+[INFO] 
+[INFO] ------------< org.example.learn.maven:dependency-mediation >------------
+[INFO] Building dependency-mediation 1.0-SNAPSHOT                       [10/26]
+[INFO]   from dependency-mediation\pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.0:tree (default-cli) @ dependency-mediation ---
+[INFO] org.example.learn.maven:dependency-mediation:pom:1.0-SNAPSHOT
+[INFO] 
+[INFO] -------------< org.example.learn.maven:mediation-property >-------------
+[INFO] Building mediation-property 1.0-SNAPSHOT                         [11/26]
+[INFO]   from dependency-mediation\mediation-property\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.0:tree (default-cli) @ mediation-property ---
+[INFO] org.example.learn.maven:mediation-property:jar:1.0-SNAPSHOT
+[INFO] 
+[INFO] -----------< org.example.learn.maven:mediation-dependency1 >------------
+[INFO] Building mediation-dependency1 1.0-SNAPSHOT                      [12/26]
+[INFO]   from dependency-mediation\mediation-dependency1\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.0:tree (default-cli) @ mediation-dependency1 ---
+[INFO] org.example.learn.maven:mediation-dependency1:jar:1.0-SNAPSHOT
+[INFO] +- org.example.learn.maven:service-a:jar:1.0-SNAPSHOT:compile
+[INFO] |  +- (com.alibaba:fastjson:jar:2.0.21:compile - omitted for conflict with 2.0.26)
+[INFO] |  +- com.google.guava:guava:jar:29.0-jre:compile
+[INFO] |  |  +- com.google.guava:failureaccess:jar:1.0.1:compile
+[INFO] |  |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[INFO] |  |  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO] |  |  +- org.checkerframework:checker-qual:jar:2.11.1:compile
+[INFO] |  |  +- com.google.errorprone:error_prone_annotations:jar:2.3.4:compile
+[INFO] |  |  \- com.google.j2objc:j2objc-annotations:jar:1.3:compile
+[INFO] |  \- xstream:xstream:jar:1.1.3:compile
+[INFO] \- com.alibaba:fastjson:jar:2.0.26:compile
+[INFO]    \- com.alibaba.fastjson2:fastjson2-extension:jar:2.0.26:compile
+[INFO]       \- com.alibaba.fastjson2:fastjson2:jar:2.0.26:compile
+[INFO] 
+[INFO] -----------< org.example.learn.maven:mediation-dependency2 >------------
+[INFO] Building mediation-dependency2 1.0-SNAPSHOT                      [13/26]
+[INFO]   from dependency-mediation\mediation-dependency2\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.0:tree (default-cli) @ mediation-dependency2 ---
+[INFO] org.example.learn.maven:mediation-dependency2:jar:1.0-SNAPSHOT
+[INFO] +- org.example.learn.maven:service-a:jar:1.0-SNAPSHOT:compile
+[INFO] |  +- com.alibaba:fastjson:jar:2.0.21:compile
+[INFO] |  |  \- com.alibaba.fastjson2:fastjson2-extension:jar:2.0.21:compile
+[INFO] |  |     \- com.alibaba.fastjson2:fastjson2:jar:2.0.21:compile
+[INFO] |  +- com.google.guava:guava:jar:29.0-jre:compile
+[INFO] |  |  +- com.google.guava:failureaccess:jar:1.0.1:compile
+[INFO] |  |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[INFO] |  |  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO] |  |  +- org.checkerframework:checker-qual:jar:2.11.1:compile
+[INFO] |  |  +- com.google.errorprone:error_prone_annotations:jar:2.3.4:compile
+[INFO] |  |  \- com.google.j2objc:j2objc-annotations:jar:1.3:compile
+[INFO] |  \- xstream:xstream:jar:1.1.3:compile
+[INFO] \- org.example.learn.maven:service-b:jar:1.0-SNAPSHOT:compile
+[INFO]    \- (com.alibaba:fastjson:jar:2.0.22:compile - omitted for conflict with 2.0.21)
+[INFO] 
+[INFO] -------< org.example.learn.maven:mediation-managed-dependency1 >--------
+[INFO] Building mediation-managed-dependency1 1.0-SNAPSHOT              [14/26]
+[INFO]   from dependency-mediation\mediation-managed-dependency1\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.0:tree (default-cli) @ mediation-managed-dependency1 ---
+[INFO] org.example.learn.maven:mediation-managed-dependency1:jar:1.0-SNAPSHOT
+[INFO] \- org.example.learn.maven:service-a:jar:1.0-SNAPSHOT:compile
+[INFO]    +- com.alibaba:fastjson:jar:2.0.21:compile
+[INFO]    |  \- com.alibaba.fastjson2:fastjson2-extension:jar:2.0.21:compile
+[INFO]    |     \- com.alibaba.fastjson2:fastjson2:jar:2.0.21:compile
+[INFO]    +- com.google.guava:guava:jar:29.0-jre:compile
+[INFO]    |  +- com.google.guava:failureaccess:jar:1.0.1:compile
+[INFO]    |  +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[INFO]    |  +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO]    |  +- org.checkerframework:checker-qual:jar:2.11.1:compile
+[INFO]    |  +- com.google.errorprone:error_prone_annotations:jar:2.3.4:compile
+[INFO]    |  \- com.google.j2objc:j2objc-annotations:jar:1.3:compile
+[INFO]    \- xstream:xstream:jar:1.1.3:compile
+[INFO] 
+[INFO] -------< org.example.learn.maven:mediation-managed-dependency2 >--------
+[INFO] Building mediation-managed-dependency2 1.0-SNAPSHOT              [15/26]
+[INFO]   from dependency-mediation\mediation-managed-dependency2\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.0:tree (default-cli) @ mediation-managed-dependency2 ---
+[INFO] org.example.learn.maven:mediation-managed-dependency2:jar:1.0-SNAPSHOT
+[INFO] 
+[INFO] -------< org.example.learn.maven:mediation-managed-dependency3 >--------
+[INFO] Building mediation-managed-dependency3 1.0-SNAPSHOT              [16/26]
+[INFO]   from dependency-mediation\mediation-managed-dependency3\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.0:tree (default-cli) @ mediation-managed-dependency3 ---
+[INFO] org.example.learn.maven:mediation-managed-dependency3:jar:1.0-SNAPSHOT
+[INFO] 
+[INFO] -------< org.example.learn.maven:mediation-managed-dependency4 >--------
+[INFO] Building mediation-managed-dependency4 1.0-SNAPSHOT              [17/26]
+[INFO]   from dependency-mediation\mediation-managed-dependency4\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.0:tree (default-cli) @ mediation-managed-dependency4 ---
+[INFO] org.example.learn.maven:mediation-managed-dependency4:jar:1.0-SNAPSHOT
+[INFO] \- org.example.learn.maven:service-e:jar:1.0-SNAPSHOT:compile
+[INFO]    +- com.alibaba:fastjson:jar:2.0.21:compile
+[INFO]    |  \- com.alibaba.fastjson2:fastjson2-extension:jar:2.0.21:compile
+[INFO]    |     \- com.alibaba.fastjson2:fastjson2:jar:2.0.21:compile
+[INFO]    \- com.google.guava:guava:jar:29.0-jre:compile
+[INFO]       +- com.google.guava:failureaccess:jar:1.0.1:compile
+[INFO]       +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[INFO]       +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO]       +- org.checkerframework:checker-qual:jar:2.11.1:compile
+[INFO]       +- com.google.errorprone:error_prone_annotations:jar:2.3.4:compile
+[INFO]       \- com.google.j2objc:j2objc-annotations:jar:1.3:compile
+[INFO] 
+[INFO] -------< org.example.learn.maven:mediation-managed-dependency5 >--------
+[INFO] Building mediation-managed-dependency5 1.0-SNAPSHOT              [18/26]
+[INFO]   from dependency-mediation\mediation-managed-dependency5\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.0:tree (default-cli) @ mediation-managed-dependency5 ---
+[INFO] org.example.learn.maven:mediation-managed-dependency5:jar:1.0-SNAPSHOT
+[INFO] \- org.example.learn.maven:service-g:jar:1.0-SNAPSHOT:compile
+[INFO] 
+[INFO] ------------< org.example.learn.maven:project-inheritance >-------------
+[INFO] Building project-inheritance 1.0-SNAPSHOT                        [19/26]
+[INFO]   from project-inheritance\pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.0:tree (default-cli) @ project-inheritance ---
+[INFO] org.example.learn.maven:project-inheritance:pom:1.0-SNAPSHOT
+[INFO] \- com.google.guava:guava:jar:29.0-jre:compile
+[INFO]    +- com.google.guava:failureaccess:jar:1.0.1:compile
+[INFO]    +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[INFO]    +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO]    +- org.checkerframework:checker-qual:jar:2.11.1:compile
+[INFO]    +- com.google.errorprone:error_prone_annotations:jar:2.3.4:compile
+[INFO]    \- com.google.j2objc:j2objc-annotations:jar:1.3:compile
+[INFO] 
+[INFO] -----------------< org.example.learn.maven:super-pom >------------------
+[INFO] Building super-pom 1.0-SNAPSHOT                                  [20/26]
+[INFO]   from project-inheritance\super-pom\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.0:tree (default-cli) @ super-pom ---
+[INFO] org.example.learn.maven:super-pom:jar:1.0-SNAPSHOT
+[INFO] \- com.google.guava:guava:jar:29.0-jre:compile
+[INFO]    +- com.google.guava:failureaccess:jar:1.0.1:compile
+[INFO]    +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[INFO]    +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO]    +- org.checkerframework:checker-qual:jar:2.11.1:compile
+[INFO]    +- com.google.errorprone:error_prone_annotations:jar:2.3.4:compile
+[INFO]    \- com.google.j2objc:j2objc-annotations:jar:1.3:compile
+[INFO] 
+[INFO] -----------< org.example.learn.maven:inheritance-properties >-----------
+[INFO] Building inheritance-properties 1.0-SNAPSHOT                     [21/26]
+[INFO]   from project-inheritance\inheritance-properties\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.0:tree (default-cli) @ inheritance-properties ---
+[INFO] org.example.learn.maven:inheritance-properties:jar:1.0-SNAPSHOT
+[INFO] \- com.google.guava:guava:jar:29.0-jre:compile
+[INFO]    +- com.google.guava:failureaccess:jar:1.0.1:compile
+[INFO]    +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[INFO]    +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO]    +- org.checkerframework:checker-qual:jar:2.11.1:compile
+[INFO]    +- com.google.errorprone:error_prone_annotations:jar:2.3.4:compile
+[INFO]    \- com.google.j2objc:j2objc-annotations:jar:1.3:compile
+[INFO] 
+[INFO] ----------< org.example.learn.maven:inheritance-dependencies >----------
+[INFO] Building inheritance-dependencies 1.0-SNAPSHOT                   [22/26]
+[INFO]   from project-inheritance\inheritance-dependencies\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.0:tree (default-cli) @ inheritance-dependencies ---
+[INFO] org.example.learn.maven:inheritance-dependencies:jar:1.0-SNAPSHOT
+[INFO] \- com.google.guava:guava:jar:29.0-jre:compile
+[INFO]    +- com.google.guava:failureaccess:jar:1.0.1:compile
+[INFO]    +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[INFO]    +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO]    +- org.checkerframework:checker-qual:jar:2.11.1:compile
+[INFO]    +- com.google.errorprone:error_prone_annotations:jar:2.3.4:compile
+[INFO]    \- com.google.j2objc:j2objc-annotations:jar:1.3:compile
+[INFO] 
+[INFO] -----< org.example.learn.maven:inheritance-dependency-management >------
+[INFO] Building inheritance-dependency-management 1.0-SNAPSHOT          [23/26]
+[INFO]   from project-inheritance\inheritance-dependency-management\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.0:tree (default-cli) @ inheritance-dependency-management ---
+[INFO] org.example.learn.maven:inheritance-dependency-management:jar:1.0-SNAPSHOT
+[INFO] \- com.google.guava:guava:jar:29.0-jre:compile
+[INFO]    +- com.google.guava:failureaccess:jar:1.0.1:compile
+[INFO]    +- com.google.guava:listenablefuture:jar:9999.0-empty-to-avoid-conflict-with-guava:compile
+[INFO]    +- com.google.code.findbugs:jsr305:jar:3.0.2:compile
+[INFO]    +- org.checkerframework:checker-qual:jar:2.11.1:compile
+[INFO]    +- com.google.errorprone:error_prone_annotations:jar:2.3.4:compile
+[INFO]    \- com.google.j2objc:j2objc-annotations:jar:1.3:compile
+[INFO] 
+[INFO] ------------------< org.example.learn.maven:plugins >-------------------
+[INFO] Building plugins 1.0-SNAPSHOT                                    [24/26]
+[INFO]   from plugins\pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.0:tree (default-cli) @ plugins ---
+[INFO] org.example.learn.maven:plugins:pom:1.0-SNAPSHOT
+[INFO] 
+[INFO] --------------< org.example.learn.maven:plugin-resource >---------------
+[INFO] Building plugin-resource 1.0-SNAPSHOT                            [25/26]
+[INFO]   from plugins\plugin-resource\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.0:tree (default-cli) @ plugin-resource ---
+[INFO] org.example.learn.maven:plugin-resource:jar:1.0-SNAPSHOT
+[INFO] 
+[INFO] -----------------< org.example.learn.maven:relocation >-----------------
+[INFO] Building relocation 1.0-SNAPSHOT                                 [26/26]
+[INFO]   from relocation\pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.6.0:tree (default-cli) @ relocation ---
+[INFO] org.example.learn.maven:relocation:jar:1.0-SNAPSHOT
+[INFO] \- org.hibernate.validator:hibernate-validator:jar:6.0.9.Final:compile
+[INFO]    +- javax.validation:validation-api:jar:2.0.1.Final:compile
+[INFO]    +- org.jboss.logging:jboss-logging:jar:3.3.2.Final:compile
+[INFO]    \- com.fasterxml:classmate:jar:1.3.4:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for maven-learn-parent 1.0-SNAPSHOT:
+[INFO] 
+[INFO] maven-learn-parent ................................. SUCCESS [  0.856 s]
+[INFO] common ............................................. SUCCESS [  0.010 s]
+[INFO] service-base ....................................... SUCCESS [  0.000 s]
+[INFO] service-a .......................................... SUCCESS [  0.070 s]
+[INFO] service-b .......................................... SUCCESS [  0.010 s]
+[INFO] service-c .......................................... SUCCESS [  0.000 s]
+[INFO] service-d .......................................... SUCCESS [  0.000 s]
+[INFO] service-e .......................................... SUCCESS [  0.010 s]
+[INFO] service-g .......................................... SUCCESS [  0.000 s]
+[INFO] dependency-mediation ............................... SUCCESS [  0.000 s]
+[INFO] mediation-property ................................. SUCCESS [  0.000 s]
+[INFO] mediation-dependency1 .............................. SUCCESS [  0.039 s]
+[INFO] mediation-dependency2 .............................. SUCCESS [  0.002 s]
+[INFO] mediation-managed-dependency1 ...................... SUCCESS [  0.000 s]
+[INFO] mediation-managed-dependency2 ...................... SUCCESS [  0.000 s]
+[INFO] mediation-managed-dependency3 ...................... SUCCESS [  0.008 s]
+[INFO] mediation-managed-dependency4 ...................... SUCCESS [  0.002 s]
+[INFO] mediation-managed-dependency5 ...................... SUCCESS [  0.000 s]
+[INFO] project-inheritance ................................ SUCCESS [  0.000 s]
+[INFO] super-pom .......................................... SUCCESS [  0.008 s]
+[INFO] inheritance-properties ............................. SUCCESS [  0.002 s]
+[INFO] inheritance-dependencies ........................... SUCCESS [  0.000 s]
+[INFO] inheritance-dependency-management .................. SUCCESS [  0.000 s]
+[INFO] plugins ............................................ SUCCESS [  0.000 s]
+[INFO] plugin-resource .................................... SUCCESS [  0.000 s]
+[INFO] relocation ......................................... SUCCESS [  0.030 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.351 s
+[INFO] Finished at: 2023-12-18T14:20:44+08:00
+[INFO] ------------------------------------------------------------------------
