@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>plugin-resource</artifactId>
+    <artifactId>ch21-plugin-resource</artifactId>
     <description>演示ant-style path matching</description>
 
     <profiles>

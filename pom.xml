@@ -13,6 +13,7 @@
     <module>ch02-dependency-mediation</module>
     <module>ch03-project-inheritance</module>
     <module>ch20-plugins</module>
+    <module>ch20-plugins/ch25-plugin-ant</module>
   </modules>
 
   <name>maven-learn-parent</name>
